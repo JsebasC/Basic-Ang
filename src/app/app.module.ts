@@ -1,16 +1,21 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+
+
+import { CourseComponent } from './component/course/course.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [    //Declara el componente
+    CourseComponent
   ],
-  imports: [
-    BrowserModule
+  imports: [ //Modulos principales, Instalacion lib ngix : 
+    BrowserModule,
+    HttpClientModule //Poder interactuar con metodos GET,POST,PUT,DELETE
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [CourseComponent]
 })
-export class AppModule { }
+export class AppModule {  
+ }
